@@ -1,7 +1,7 @@
 `https://graphql.contentful.com/content/v1/spaces/:spaceid`,
 
 0. Init
-  a. Create contenful account
+  a. Create contenful account - This is kind of the biggest roadblock. AI could help with this.
   b. Tour
   c. Add envs
   d. GraphQL
