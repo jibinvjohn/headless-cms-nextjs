@@ -1,4 +1,4 @@
-export const contentGqlFetcher = async (query: string, variables={}, preview = false) => {
+export const contentGqlFetcher = async ({query = '', variables={}, preview = false}) => {
     const res = await fetch(`https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`, {
         method: 'POST',
         headers: {

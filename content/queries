@@ -1,8 +1,7 @@
 import {contentGqlFetcher} from "./fetch";
 
 export const getContentForHero = async () => {
-    const query = `
-    #graphql
+    const query = `#graphql
     query Query {
         heroCollection {
             items {
@@ -22,5 +21,5 @@ export const getContentForHero = async () => {
         }
 
     `
-    // const data k
+    const data = await contentGqlFetcher();
 }
