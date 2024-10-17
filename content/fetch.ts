@@ -15,4 +15,6 @@ export const contentGqlFetcher = async ({query = '', variables={}, preview = fal
         console.log(errors);
         throw new Error('Could not get content');
     }
+
+    return data;
 }
