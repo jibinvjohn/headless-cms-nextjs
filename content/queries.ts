@@ -1,3 +1,4 @@
+import { HeroQuery } from "@/types";
 import {contentGqlFetcher} from "./fetch";
 
 export const getContentForHero = async () => {
@@ -7,9 +8,7 @@ export const getContentForHero = async () => {
             items {
             preTitle
             title
-            subtitle {
-                json
-            }
+            subtitles
             callToActionsCollection {
                 items {
                 label
@@ -21,5 +20,11 @@ export const getContentForHero = async () => {
         }
 
     `
-    const data = await contentGqlFetcher();
+    const data = await contentGqlFetcher<HeroQuery>({query});
+
+    if (!data) {
+        throw Error('oops')
+    }
+
+    return data;
 }
