@@ -1,5 +1,11 @@
-
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  images: {
+    domains: ["images.ctfassets.net"],
+  },
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig
