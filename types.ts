@@ -1,26 +1,26 @@
-export type HeroContentQuery = {
-  content: {
+export type LogoWallQuery = {
+  assetCollection: {
+    items: {
+      width: number
+      height: number
+      url: string
+      title: string
+    }[]
+  }
+}
+
+export type HeroQuery = {
+  heroCollection: {
     items: {
       title: string
       subtitle: string
       preTitle: string
-      ctas: {
+      callToActionsCollection: {
         items: {
-          route: string
+          link: string
           label: string
         }[]
       }
     }[]
   }
 }
-
-export type LogoWallQuery = {
-      assetCollection: {
-        items: {
-          title: string
-          url: string
-          width: number
-          height: number
-        }
-      }
-    }
