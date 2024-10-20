@@ -24,3 +24,16 @@ export type HeroQuery = {
     }[]
   }
 }
+
+export type HeaderNavQuery = {
+  navigationCollection: {
+    items: {
+      linksCollection: {
+        items: {
+          label: string
+          href: string
+        }[]
+      }
+    }[]
+  }
+}
